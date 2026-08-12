@@ -1,5 +1,6 @@
 package com.junior.airplane_panel.model;
 
+import com.junior.airplane_panel.enums.FlightStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -38,7 +39,12 @@ public class Flight {
     private FlightStatus flightStatus;
 
 
-
-
-
+    public Flight(String flightNumber, String company, String destination, String gate, LocalDate hour, FlightStatus flightStatus) {
+        this.flightNumber = flightNumber;
+        this.company = company;
+        this.destination = destination;
+        this.gate = gate;
+        this.hour = hour;
+        this.flightStatus = flightStatus;
+    }
 }
